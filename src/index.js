@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ItemStatusFilter } from './components/ItemStatusFilter';
 import { PageHeader } from './components/PageHeader';
 import { SearchInput } from './components/SearchInput';
 import { TodoList } from './components/TodoList';
+import './index.css';
 
 const App = () => {
   const listItems = [
@@ -11,9 +13,13 @@ const App = () => {
     { label: 'To pee', important: false, id: 3 }
   ]
   return (
-    <div>      
-      <PageHeader/>
+    <div className="todo-app">      
+      <PageHeader toDo={1} done={3}/>
+      <div className="top-panel d-flex">
       <SearchInput/>
+      <ItemStatusFilter />
+      </div>
+      
       <TodoList todos={ listItems }/>
     </div>
   )
