@@ -1,6 +1,6 @@
 import React from 'react';
 import './TodoList.css'
-import { ToDoListItem } from './ToDoListItem';
+import ToDoListItem from '../ToDoListItem';
 export const TodoList = ({ todos }) => {  
   const elements = todos.map(elem => {
     const {id, ...elemProp} = elem;
