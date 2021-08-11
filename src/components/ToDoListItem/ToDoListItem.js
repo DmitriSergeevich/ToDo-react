@@ -4,12 +4,11 @@ import './ToDoListItem.css'
 
 export default class ToDoListItem extends React.Component {  
   
-  
-  
   render() {
     const { label, onDeleted, onToggleImportant, onToggleDone, done, important } = this.props;
     
     let itemStyle = "todo-list-item";
+    
     if (done) {
       itemStyle += ' done';
     }
@@ -39,6 +38,6 @@ export default class ToDoListItem extends React.Component {
         </button>
       </span>
     
-      );
+    );
   }
 }
